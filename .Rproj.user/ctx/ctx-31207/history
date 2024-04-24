@@ -1,0 +1,39 @@
+renv::init()
+install.packages("renv")
+renv::init()
+renv::snapshot()
+pip freeze > requirements.txt
+pip install vetiver
+install.packages("vetiver")
+install.packages("vetiver")
+install.packages("vetiver")
+pip install vetiver
+pip install vetiver
+install.packages("vetiver")
+pip install vetiver
+install.packages("vetiver")
+install.packages("reticulate")
+pip install vetiver
+install.packages("vetiver")
+install.packages("vetiver")
+install.packages("digest")
+install.packages("digest")
+install.packages("digest")
+install.packages("vetiver")
+install.packages("vetiver")
+library(palmerpenguins)
+install.packages("palmerpenguins")
+palmerpenguins
+install.packages("palmerpenguins")
+library(palmerpenguins)
+library(palmerpenguins)
+library(palmerpenguins)
+library(palmerpenguins)
+install.packages("palmerpenguins")
+install.packages("palmerpenguins")
+install.packages("palmerpenguins")
+library(palmerpenguins)
+install.packages("palmerpenguins")
+install.packages("palmerpenguins", repos = "http://cran.rstudio.com/")
+library(renv)
+install.packages("palmerpenguins", repos = "http://cran.rstudio.com/")
