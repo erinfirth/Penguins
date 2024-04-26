@@ -1,0 +1,216 @@
+renv::init()
+install.packages("renv")
+renv::init()
+renv::snapshot()
+pip freeze > requirements.txt
+pip install vetiver
+install.packages("vetiver")
+install.packages("vetiver")
+install.packages("vetiver")
+pip install vetiver
+pip install vetiver
+install.packages("vetiver")
+pip install vetiver
+install.packages("vetiver")
+install.packages("reticulate")
+pip install vetiver
+install.packages("vetiver")
+install.packages("vetiver")
+install.packages("digest")
+install.packages("digest")
+install.packages("digest")
+install.packages("vetiver")
+install.packages("vetiver")
+library(palmerpenguins)
+install.packages("palmerpenguins")
+palmerpenguins
+install.packages("palmerpenguins")
+library(palmerpenguins)
+library(palmerpenguins)
+library(palmerpenguins)
+library(palmerpenguins)
+install.packages("palmerpenguins")
+install.packages("palmerpenguins")
+install.packages("renv")
+install.packages("palmerpenguins", repos = "http://cran.rstudio.com/")
+install.packages("palmerpenguins")
+install.packages("palmerpenguins")
+install.packages("palmerpenguins", repos = "http://cran.rstudio.com/")
+install.packages("palmerpenguins")
+library(palmerpenguins)
+version
+version
+install.packages("palmerpenguins")
+install.packages("tidyverse")
+install.packages(c("palmerpenguins", "tidyverse"))
+install.packages(c("palmerpenguins", "tidyverse"), lib="C:/Users/cadet_admin/AppData/Local/R/cache/R/renv/sandbox/R-4.3/x86_64-w64-mingw32/7cdaab8d")
+install.packages(c("palmerpenguins", "tidyverse"), dependencies = FALSE)
+renv::init()
+renv::snapshot()
+1
+renv::snapshot()
+install.packages("palmerpenguins")
+install.packages("palmerpenguins", repos = "http://cran.rstudio.com/")
+install.packages("C:\Users\C25Erin.Firth\Downloads\palmerpenguins_0.1.1.tar.gz", repos = NULL, type = "source")
+install.packages("C:/Users/C25Erin.Firth/Downloads/palmerpenguins_0.1.1.tar.gz", repos = NULL, type = "source")
+library(palmerpenguins)
+library(dplyr)
+install.packages("C:/Users/C25Erin.Firth/Downloads/dplyr_1.1.4.tar.gz", repos = NULL, type = "source")
+install.packages("C:/Users/C25Erin.Firth/Downloads/dplyr_1.1.4.tar.gz", repos = NULL, type = "source")
+install.packages("C:/Users/C25Erin.Firth/Downloads/dplyr_1.1.4.tar.gz", repos = NULL, type = "source")
+install.packages("dplyr")
+install.packages("C:/Users/C25Erin.Firth/Downloads/ggplot2_3.5.1.tar.gz", repos = NULL, type = "source")
+install.packages("C:/Users/C25Erin.Firth/Downloads/dplyr_1.1.4.tar.gz", repos = NULL, type = "source")
+setRepositories()
+install.packages("palmerpenguins", repos = "http://cran.r-project.org")
+library(palmerpenguins)
+palmerpenguins
+library(palmerpenguins)
+df %>%
+group_by(species, sex) %>%
+summarise(
+across(
+where(is.numeric),
+\(x) mean(x, na.rm = TRUE)
+)
+) %>%
+knitr::kable()
+remotes::install_github("allison-horst/palmerpenguins")
+install.packages("remotes")
+Sys,setenv(RENV_DOWNLOAD_-FILE_METHOD = 'libcurl')
+Sys.setenv(RENV_DOWNLOAD_-FILE_METHOD = 'libcurl')
+Sys.setenv(RENV_DOWNLOAD_FILE_METHOD = 'libcurl')
+renv::equip()
+install.packages("palmerpenguins")
+install.packages("ggplot2")
+install.packages("dplyr")
+install.packages("vetiver")
+library(palmerpenguins)
+library(dplyr)
+library(ggplot2)
+df <- palmerpenguins::penguins
+install.packages("palmerpenguins")
+library(palmerpenguins)
+library(dplyr)
+library(ggplot2)
+df <- palmerpenguins::penguins
+library(palmerpenguins)
+library(dplyr)
+library(ggplot2)
+df <- palmerpenguins::penguins
+df %>%
+group_by(species, sex) %>%
+summarise(
+across(
+where(is.numeric),
+\(x) mean(x, na.rm = TRUE)
+)
+) %>%
+knitr::kable()
+df %>%
+ggplot(aes(x = bill_length_mm, y = body_mass_g, color = species)) +
+geom_point() +
+geom_smooth(method = "lm")
+DBI::dbDisconnect(con)
+install.packages("shiny")
+options(download.file.method = "libcurl")
+install.packages("shiny", repos="http://cran.rstudio.com/")
+install.packages("palmerpenguins")
+library(palmerpenguins)
+library(dplyr)
+library(ggplot2)
+df <- palmerpenguins::penguins
+df %>%
+group_by(species, sex) %>%
+summarise(
+across(
+where(is.numeric),
+\(x) mean(x, na.rm = TRUE)
+)
+) %>%
+knitr::kable()
+df %>%
+ggplot(aes(x = bill_length_mm, y = body_mass_g, color = species)) +
+geom_point() +
+geom_smooth(method = "lm")
+library(dplyr)
+library(ggplot2)
+library(dbplyr)
+con <- DBI::dbConnect(
+duckdb::duckdb(),
+dbdir = "my-db.duckdb"
+)
+df <- dplyr::tbl(con, "penguins")
+library(dplyr)
+library(ggplot2)
+library(dbplyr)
+con <- DBI::dbConnect(
+duckdb::duckdb(),
+dbdir = "my-db.duckdb"
+)
+df <- dplyr::tbl(con, "penguins")
+View(con)
+View(df)
+View(con)
+library(palmerpenguins)
+library(dplyr)
+library(ggplot2)
+df <- palmerpenguins::penguins
+View(df)
+library(dplyr)
+library(ggplot2)
+library(dbplyr)
+#load data
+con <- DBI::dbConnect(duckdb::duckdb(), dbdir = "my-db.duckdb")
+DBI::dbWriteTable(con, "penguins", palmerpenguins::penguins)
+DBI::dbDisconnect(con)
+con <- DBI::dbConnect(
+duckdb::duckdb(),
+dbdir = "my-db.duckdb"
+)
+df <- dplyr::tbl(con, "penguins")
+# Connect to DuckDB
+library(dplyr)
+library(ggplot2)
+library(dbplyr)
+#load data
+con <- DBI::dbConnect(duckdb::duckdb(), dbdir = "my-db.duckdb")
+DBI::dbWriteTable(con, "penguins", palmerpenguins::penguins)
+library(dplyr)
+library(ggplot2)
+library(dbplyr)
+#load data
+con <- DBI::dbConnect(duckdb::duckdb(), dbdir = "my-db.duckdb")
+DBI::dbWriteTable(con, "penguins", palmerpenguins::penguins, overwrite = TRUE)
+DBI::dbDisconnect(con)
+con <- DBI::dbConnect(
+duckdb::duckdb(),
+dbdir = "my-db.duckdb"
+)
+df <- dplyr::tbl(con, "penguins")
+# Connect to DuckDB
+df %>%
+group_by(species, sex) %>%
+summarise(
+across(
+ends_with("mm") | ends_with("g"),
+\(x) mean(x, na.rm = TRUE)
+)
+) %>%
+dplyr::collect() %>%
+knitr::kable()
+df %>%
+ggplot(aes(x = bill_length_mm, y = body_mass_g, color = species)) +
+geom_point() +
+geom_smooth(method = "lm")
+DBI::dbDisconnect(con)
+reticulate::repl_python()
+reticulate::repl_python()
+reticulate::repl_python()
+reticulate::repl_python()
+reticulate::repl_python()
+reticulate::repl_python()
+reticulate::repl_python()
+renv::status()
+install.packages("png")
+install.packages("reticulate")

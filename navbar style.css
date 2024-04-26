@@ -1,0 +1,15 @@
+/* Style for header tag */
+navbar {
+    background-color: black; /* Sets the background color to black */
+    color: white;            /* Sets the text color to white */
+    padding: 10px;           /* Adds some padding inside the header */
+    text-align: center;      /* Centers the text within the header */
+}
+
+/* If you are using a class named 'header' */
+.navbar {
+    background-color: black; /* Sets the background color to black */
+    color: white;            /* Sets the text color to white */
+    padding: 10px;           /* Adds some padding inside the header */
+    text-align: center;      /* Centers the text within the header */
+}

@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -125,7 +91,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./eda.html" rel="" target="">
- <span class="menu-text">code-fold: true</span></a>
+ <span class="menu-text">Penguins EDA</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./model.html" rel="" target="">
+ <span class="menu-text">Model</span></a>
   </li>  
 </ul>
             <div class="quarto-navbar-tools ms-auto">
@@ -139,7 +109,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#palmer-penguins-dataset" id="toc-palmer-penguins-dataset" class="nav-link active" data-scroll-target="#palmer-penguins-dataset">Palmer Penguins Dataset</a></li>
+  <li><a href="#the-long-term-ecological-research-lter-program-at-palmer-station" id="toc-the-long-term-ecological-research-lter-program-at-palmer-station" class="nav-link" data-scroll-target="#the-long-term-ecological-research-lter-program-at-palmer-station">The Long Term Ecological Research (LTER) Program at Palmer Station</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -161,15 +138,46 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p>About this site</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
+<section id="palmer-penguins-dataset" class="level3">
+<h3 class="anchored" data-anchor-id="palmer-penguins-dataset">Palmer Penguins Dataset</h3>
+<p>The ‘palmerpenguins’ dataset is a comprehensive collection of size measurements, clutch observations, and blood isotope ratios for adult foraging penguins from three distinct species: Adélie, Chinstrap, and Gentoo. These data were meticulously gathered by Dr.&nbsp;Kristen Gorman in collaboration with the Palmer Station Long Term Ecological Research (LTER) Program. The Palmer Archipelago, located near Palmer Station, Antarctica, serves as the primary setting for this extensive study. This dataset is invaluable for ecological and biological research, offering insights into the foraging patterns and breeding behaviors of penguins in a rapidly changing environment.</p>
+<section id="adélie-penguins" class="level4">
+<h4 class="anchored" data-anchor-id="adélie-penguins">Adélie Penguins</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Adelie Penguin.jpg" title="Adélie Penguin" style="width:50.0%;height:50.0%" class="figure-img"></p>
+<figcaption class="figure-caption">Adélie Penguin</figcaption>
+</figure>
 </div>
+<p>Adélie penguins are the most widespread of the Antarctic penguins, inhabiting the entire Antarctic coast. They are distinguished by their tuxedo-like black and white plumage and a distinctive white ring around their eyes. Adélie penguins feed primarily on krill, though their diet can also include fish and small squid. They are particularly noted for their incredible adaptability to their frozen surroundings, nesting and breeding on the rocky, ice-free shores. A fun fact about Adélies is that they are among the southernmost distributed of all seabirds, with some colonies located just a few hundred kilometers from the South Pole.</p>
+</section>
+<section id="chinstrap-penguins" class="level4">
+<h4 class="anchored" data-anchor-id="chinstrap-penguins">Chinstrap Penguins</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Chinstrap Penguin.jpg" title="Chinstrap Penguin" style="width:50.0%;height:50.0%" class="figure-img"></p>
+<figcaption class="figure-caption">Chinstrap Penguin</figcaption>
+</figure>
 </div>
+<p>Chinstrap penguins are easily recognized by the narrow black band under their heads which makes it appear as though they are wearing a helmet. These birds are found on the islands of the Southern Ocean and on the Antarctic Peninsula. Their diet mainly consists of krill, but they also consume various types of fish and some crustaceans. Chinstraps are known for their aggressive nature, which becomes particularly evident during the breeding season. One interesting tidbit about these creatures is that they are the most numerous penguin species, with millions of individuals spread across their range.</p>
+</section>
+<section id="gentoo-penguins" class="level4">
+<h4 class="anchored" data-anchor-id="gentoo-penguins">Gentoo Penguins</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Gentoo Penguin.jpg" title="Gentoo Penguin" style="width:50.0%;height:50.0%" class="figure-img"></p>
+<figcaption class="figure-caption">Gentoo Penguin</figcaption>
+</figure>
+</div>
+<p>Gentoo penguins are the third species featured in this dataset. Identified by their distinctive orange beaks and the white “cap” across the top of their heads, Gentoos are the fastest underwater swimming birds, reaching speeds of up to 36 kilometers per hour. They primarily inhabit the sub-Antarctic islands but are also found on the Antarctic Peninsula. Gentoos have a varied diet that includes fish, squid, and krill. What makes them unique is their breeding behavior; they lay two eggs of different sizes and if food is sufficient, successfully rear both chicks.</p>
+</section>
+</section>
+<section id="the-long-term-ecological-research-lter-program-at-palmer-station" class="level3">
+<h3 class="anchored" data-anchor-id="the-long-term-ecological-research-lter-program-at-palmer-station">The Long Term Ecological Research (LTER) Program at Palmer Station</h3>
+<p>The Palmer Station Long Term Ecological Research (LTER) is one of the key ecological monitoring programs in the Antarctic region. It was established to study and understand the Antarctic marine ecosystem. The program focuses on documenting the ecological processes in the Antarctic and how climate change is impacting species, from microscopic phytoplankton to top predators like seals and penguins. Researchers at Palmer LTER collect long-term data that contribute to the global understanding of environmental changes. This project highlights the integration of various scientific disciplines and collaborative data analysis to foster a comprehensive understanding of the region’s ecological dynamics. The insights garnered from the LTER program are crucial for developing effective conservation strategies and managing human activities in these fragile habitats.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

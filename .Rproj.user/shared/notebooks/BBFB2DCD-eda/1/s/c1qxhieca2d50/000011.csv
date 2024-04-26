@@ -1,0 +1,23 @@
+"0","log <- log4r::logger()"
+"0","log4r::info(log, ""App Started"")"
+"1","INFO  [2024-04-25 16:24:19] App Started
+"
+"0","library(palmerpenguins)"
+"0","library(dplyr)"
+"2","
+Attaching package: ‘dplyr’
+
+"
+"2","The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+"
+"2","The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+"
+"0","library(ggplot2)"
+"0",""
+"0","df <- palmerpenguins::penguins"

@@ -11,20 +11,111 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "Palmer Penguins Dataset\nThe ‘palmerpenguins’ dataset is a comprehensive collection of size measurements, clutch observations, and blood isotope ratios for adult foraging penguins from three distinct species: Adélie, Chinstrap, and Gentoo. These data were meticulously gathered by Dr. Kristen Gorman in collaboration with the Palmer Station Long Term Ecological Research (LTER) Program. The Palmer Archipelago, located near Palmer Station, Antarctica, serves as the primary setting for this extensive study. This dataset is invaluable for ecological and biological research, offering insights into the foraging patterns and breeding behaviors of penguins in a rapidly changing environment.\n\nAdélie Penguins\n\n\n\nAdélie Penguin\n\n\nAdélie penguins are the most widespread of the Antarctic penguins, inhabiting the entire Antarctic coast. They are distinguished by their tuxedo-like black and white plumage and a distinctive white ring around their eyes. Adélie penguins feed primarily on krill, though their diet can also include fish and small squid. They are particularly noted for their incredible adaptability to their frozen surroundings, nesting and breeding on the rocky, ice-free shores. A fun fact about Adélies is that they are among the southernmost distributed of all seabirds, with some colonies located just a few hundred kilometers from the South Pole.\n\n\nChinstrap Penguins\n\n\n\nChinstrap Penguin\n\n\nChinstrap penguins are easily recognized by the narrow black band under their heads which makes it appear as though they are wearing a helmet. These birds are found on the islands of the Southern Ocean and on the Antarctic Peninsula. Their diet mainly consists of krill, but they also consume various types of fish and some crustaceans. Chinstraps are known for their aggressive nature, which becomes particularly evident during the breeding season. One interesting tidbit about these creatures is that they are the most numerous penguin species, with millions of individuals spread across their range.\n\n\nGentoo Penguins\n\n\n\nGentoo Penguin\n\n\nGentoo penguins are the third species featured in this dataset. Identified by their distinctive orange beaks and the white “cap” across the top of their heads, Gentoos are the fastest underwater swimming birds, reaching speeds of up to 36 kilometers per hour. They primarily inhabit the sub-Antarctic islands but are also found on the Antarctic Peninsula. Gentoos have a varied diet that includes fish, squid, and krill. What makes them unique is their breeding behavior; they lay two eggs of different sizes and if food is sufficient, successfully rear both chicks.\n\n\n\nThe Long Term Ecological Research (LTER) Program at Palmer Station\nThe Palmer Station Long Term Ecological Research (LTER) is one of the key ecological monitoring programs in the Antarctic region. It was established to study and understand the Antarctic marine ecosystem. The program focuses on documenting the ecological processes in the Antarctic and how climate change is impacting species, from microscopic phytoplankton to top predators like seals and penguins. Researchers at Palmer LTER collect long-term data that contribute to the global understanding of environmental changes. This project highlights the integration of various scientific disciplines and collaborative data analysis to foster a comprehensive understanding of the region’s ecological dynamics. The insights garnered from the LTER program are crucial for developing effective conservation strategies and managing human activities in these fragile habitats."
   },
   {
     "objectID": "eda.html#penguin-size-and-mass-by-sex-and-species",
     "href": "eda.html#penguin-size-and-mass-by-sex-and-species",
     "title": "Penguins EDA",
-    "section": "Penguin Size and Mass by Sex and Species",
-    "text": "Penguin Size and Mass by Sex and Species\nlibrary(palmerpenguins)\nlibrary(dplyr)\nlibrary(ggplot2)\n\ndf &lt;- palmerpenguins::penguins\ndf %&gt;%\n  group_by(species, sex) %&gt;%\n  summarise(\n    across(\n      where(is.numeric), \n      \\(x) mean(x, na.rm = TRUE)\n      )\n    ) %&gt;%\n  knitr::kable()"
+    "section": "",
+    "text": "Code\nlog &lt;- log4r::logger()\nlog4r::info(log, \"App Started\")\n\n\nINFO  [2024-04-25 17:13:38] App Started\n\n\nCode\nlibrary(palmerpenguins)\nlibrary(dplyr)\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\nCode\nlibrary(ggplot2)\n\ndf &lt;- palmerpenguins::penguins\n\n\n\n\nCode\ndf %&gt;%\n  group_by(species, sex) %&gt;%\n  summarise(\n    across(\n      where(is.numeric), \n      \\(x) mean(x, na.rm = TRUE)\n      )\n    ) %&gt;%\n  knitr::kable()\n\n\n`summarise()` has grouped output by 'species'. You can override using the\n`.groups` argument.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nspecies\nsex\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nyear\n\n\n\n\nAdelie\nfemale\n37.25753\n17.62192\n187.7945\n3368.836\n2008.055\n\n\nAdelie\nmale\n40.39041\n19.07260\n192.4110\n4043.493\n2008.055\n\n\nAdelie\nNA\n37.84000\n18.32000\n185.6000\n3540.000\n2007.000\n\n\nChinstrap\nfemale\n46.57353\n17.58824\n191.7353\n3527.206\n2007.971\n\n\nChinstrap\nmale\n51.09412\n19.25294\n199.9118\n3938.971\n2007.971\n\n\nGentoo\nfemale\n45.56379\n14.23793\n212.7069\n4679.741\n2008.069\n\n\nGentoo\nmale\n49.47377\n15.71803\n221.5410\n5484.836\n2008.066\n\n\nGentoo\nNA\n45.62500\n14.55000\n215.7500\n4587.500\n2008.400"
   },
   {
     "objectID": "eda.html#penguin-size-vs-mass-by-species",
     "href": "eda.html#penguin-size-vs-mass-by-species",
     "title": "Penguins EDA",
     "section": "Penguin Size vs Mass by Species",
-    "text": "Penguin Size vs Mass by Species\ndf %&gt;%\n  ggplot(aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() + \n  geom_smooth(method = \"lm\")"
+    "text": "Penguin Size vs Mass by Species\n\n\nCode\ndf %&gt;%\n  ggplot(aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() + \n  geom_smooth(method = \"lm\")\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\nWarning: Removed 2 rows containing non-finite outside the scale range\n(`stat_smooth()`).\n\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`)."
+  },
+  {
+    "objectID": "eda.html",
+    "href": "eda.html",
+    "title": "Penguins EDA",
+    "section": "",
+    "text": "Code\nlog &lt;- log4r::logger()\nlog4r::info(log, \"App Started\")\n\n\nINFO  [2024-04-25 17:13:38] App Started\n\n\nCode\nlibrary(palmerpenguins)\nlibrary(dplyr)\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\nCode\nlibrary(ggplot2)\n\ndf &lt;- palmerpenguins::penguins\n\n\n\n\nCode\ndf %&gt;%\n  group_by(species, sex) %&gt;%\n  summarise(\n    across(\n      where(is.numeric), \n      \\(x) mean(x, na.rm = TRUE)\n      )\n    ) %&gt;%\n  knitr::kable()\n\n\n`summarise()` has grouped output by 'species'. You can override using the\n`.groups` argument.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nspecies\nsex\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nyear\n\n\n\n\nAdelie\nfemale\n37.25753\n17.62192\n187.7945\n3368.836\n2008.055\n\n\nAdelie\nmale\n40.39041\n19.07260\n192.4110\n4043.493\n2008.055\n\n\nAdelie\nNA\n37.84000\n18.32000\n185.6000\n3540.000\n2007.000\n\n\nChinstrap\nfemale\n46.57353\n17.58824\n191.7353\n3527.206\n2007.971\n\n\nChinstrap\nmale\n51.09412\n19.25294\n199.9118\n3938.971\n2007.971\n\n\nGentoo\nfemale\n45.56379\n14.23793\n212.7069\n4679.741\n2008.069\n\n\nGentoo\nmale\n49.47377\n15.71803\n221.5410\n5484.836\n2008.066\n\n\nGentoo\nNA\n45.62500\n14.55000\n215.7500\n4587.500\n2008.400"
+  },
+  {
+    "objectID": "eda.html#penguin-size-and-mass-by-sex-and-species-1",
+    "href": "eda.html#penguin-size-and-mass-by-sex-and-species-1",
+    "title": "Penguins EDA",
+    "section": "Penguin Size and Mass by Sex and Species",
+    "text": "Penguin Size and Mass by Sex and Species\n\n\nCode\nlibrary(dplyr)\nlibrary(ggplot2)\nlibrary(dbplyr)\n\n\n\nAttaching package: 'dbplyr'\n\n\nThe following objects are masked from 'package:dplyr':\n\n    ident, sql\n\n\nCode\n#load data\ncon &lt;- DBI::dbConnect(duckdb::duckdb(), dbdir = \"my-db.duckdb\")\nDBI::dbWriteTable(con, \"penguins\", palmerpenguins::penguins, overwrite = TRUE)\nDBI::dbDisconnect(con)\n\n\ncon &lt;- DBI::dbConnect(\n  duckdb::duckdb(), \n  dbdir = \"my-db.duckdb\"\n  )\ndf &lt;- dplyr::tbl(con, \"penguins\")\n# Connect to DuckDB\n\n\n\n\nCode\ndf %&gt;%\n  group_by(species, sex) %&gt;%\n  summarise(\n    across(\n        ends_with(\"mm\") | ends_with(\"g\"),\n      \\(x) mean(x, na.rm = TRUE)\n      )\n    ) %&gt;%\n  dplyr::collect() %&gt;%\n  knitr::kable()\n\n\n`summarise()` has grouped output by \"species\". You can override using the\n`.groups` argument.\n\n\n\n\n\n\n\n\n\n\n\n\n\nspecies\nsex\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\n\n\n\n\nAdelie\nNA\n37.84000\n18.32000\n185.6000\n3540.000\n\n\nAdelie\nfemale\n37.25753\n17.62192\n187.7945\n3368.836\n\n\nAdelie\nmale\n40.39041\n19.07260\n192.4110\n4043.493\n\n\nChinstrap\nfemale\n46.57353\n17.58824\n191.7353\n3527.206\n\n\nChinstrap\nmale\n51.09412\n19.25294\n199.9118\n3938.971\n\n\nGentoo\nNA\n45.62500\n14.55000\n215.7500\n4587.500\n\n\nGentoo\nfemale\n45.56379\n14.23793\n212.7069\n4679.741\n\n\nGentoo\nmale\n49.47377\n15.71803\n221.5410\n5484.836"
+  },
+  {
+    "objectID": "eda.html#penguin-size-vs-mass-by-species-1",
+    "href": "eda.html#penguin-size-vs-mass-by-species-1",
+    "title": "Penguins EDA",
+    "section": "Penguin Size vs Mass by Species",
+    "text": "Penguin Size vs Mass by Species\n\n\nCode\ndf %&gt;%\n  ggplot(aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() + \n  geom_smooth(method = \"lm\")\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\nWarning: Removed 2 rows containing non-finite outside the scale range\n(`stat_smooth()`).\n\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\nCode\nDBI::dbDisconnect(con)"
+  },
+  {
+    "objectID": "model.html",
+    "href": "model.html",
+    "title": "Model",
+    "section": "",
+    "text": "Code\nfrom palmerpenguins import penguins\nfrom pandas import get_dummies\nimport numpy as np\nfrom sklearn.linear_model import LinearRegression\nfrom sklearn import preprocessing"
+  },
+  {
+    "objectID": "model.html#get-data",
+    "href": "model.html#get-data",
+    "title": "Model",
+    "section": "Get Data",
+    "text": "Get Data\n\n\nCode\ndf = penguins.load_penguins().dropna()\n\ndf.head(3)\n\n\n\n\n\n\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\n0\nAdelie\nTorgersen\n39.1\n18.7\n181.0\n3750.0\nmale\n2007\n\n\n1\nAdelie\nTorgersen\n39.5\n17.4\n186.0\n3800.0\nfemale\n2007\n\n\n2\nAdelie\nTorgersen\n40.3\n18.0\n195.0\n3250.0\nfemale\n2007"
+  },
+  {
+    "objectID": "model.html#define-model-and-fit",
+    "href": "model.html#define-model-and-fit",
+    "title": "Model",
+    "section": "Define Model and Fit",
+    "text": "Define Model and Fit\n\n\nCode\nX = get_dummies(df[['bill_length_mm', 'species', 'sex']], drop_first = True)\ny = df['body_mass_g']\n\nmodel = LinearRegression().fit(X, y)"
+  },
+  {
+    "objectID": "model.html#get-some-information",
+    "href": "model.html#get-some-information",
+    "title": "Model",
+    "section": "Get some information",
+    "text": "Get some information\n\n\nCode\nprint(f\"R^2 {model.score(X,y)}\")\nprint(f\"Intercept {model.intercept_}\")\nprint(f\"Columns {X.columns}\")\nprint(f\"Coefficients {model.coef_}\")\n\n\nR^2 0.8555368759537614\nIntercept 2169.2697209393973\nColumns Index(['bill_length_mm', 'species_Chinstrap', 'species_Gentoo', 'sex_male'], dtype='object')\nCoefficients [  32.53688677 -298.76553447 1094.86739145  547.36692408]"
+  },
+  {
+    "objectID": "model.html#turn-into-vetiver-model",
+    "href": "model.html#turn-into-vetiver-model",
+    "title": "Model",
+    "section": "Turn into Vetiver Model",
+    "text": "Turn into Vetiver Model\n\n\nCode\nfrom vetiver import VetiverModel\nv = VetiverModel(model, model_name='penguin_model', prototype_data=X)"
+  },
+  {
+    "objectID": "model.html#save-to-board",
+    "href": "model.html#save-to-board",
+    "title": "Model",
+    "section": "Save to Board",
+    "text": "Save to Board\n\n\nCode\nfrom pins import board_folder\nfrom vetiver import vetiver_pin_write\n\nmodel_board = board_folder(\"/data/model\", allow_pickle_read = True)\nvetiver_pin_write(model_board, v)\n\n\nModel Cards provide a framework for transparent, responsible reporting. \n Use the vetiver `.qmd` Quarto template as a place to start, \n with vetiver.model_card()\nWriting pin:\nName: 'penguin_model'\nVersion: 20240425T164128Z-19257"
+  },
+  {
+    "objectID": "model.html#turn-model-into-api",
+    "href": "model.html#turn-model-into-api",
+    "title": "Model",
+    "section": "Turn model into API",
+    "text": "Turn model into API\n\n\nCode\nfrom vetiver import VetiverAPI\napp = VetiverAPI(v, check_prototype = True)\n\n\n\n\nCode\nimport duckdb\nfrom pandas import get_dummies\nimport numpy as np\nfrom sklearn.linear_model import LinearRegression\nfrom sklearn import preprocessing"
+  },
+  {
+    "objectID": "model.html#get-data-1",
+    "href": "model.html#get-data-1",
+    "title": "Model",
+    "section": "Get Data",
+    "text": "Get Data\n\n\nCode\ncon = duckdb.connect('my-db.duckdb')\ndf = con.execute(\"SELECT * FROM penguins\").fetchdf().dropna()\ncon.close()\n\ndf.head(3)\n\n\n\n\n\n\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\n0\nAdelie\nTorgersen\n39.1\n18.7\n181.0\n3750.0\nmale\n2007\n\n\n1\nAdelie\nTorgersen\n39.5\n17.4\n186.0\n3800.0\nfemale\n2007\n\n\n2\nAdelie\nTorgersen\n40.3\n18.0\n195.0\n3250.0\nfemale\n2007"
+  },
+  {
+    "objectID": "model.html#define-model-and-fit-1",
+    "href": "model.html#define-model-and-fit-1",
+    "title": "Model",
+    "section": "Define Model and Fit",
+    "text": "Define Model and Fit\n\n\nCode\nX = get_dummies(df[['bill_length_mm', 'species', 'sex']], drop_first = True)\ny = df['body_mass_g']\n\nmodel = LinearRegression().fit(X, y)"
+  },
+  {
+    "objectID": "model.html#get-some-information-1",
+    "href": "model.html#get-some-information-1",
+    "title": "Model",
+    "section": "Get some information",
+    "text": "Get some information\n\n\nCode\nprint(f\"R^2 {model.score(X,y)}\")\nprint(f\"Intercept {model.intercept_}\")\nprint(f\"Columns {X.columns}\")\nprint(f\"Coefficients {model.coef_}\")\n\n\nR^2 0.8555368759537614\nIntercept 2169.2697209393973\nColumns Index(['bill_length_mm', 'species_Chinstrap', 'species_Gentoo', 'sex_male'], dtype='object')\nCoefficients [  32.53688677 -298.76553447 1094.86739145  547.36692408]"
   }
 ]
