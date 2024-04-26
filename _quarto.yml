@@ -21,3 +21,6 @@ format:
 
 editor: visual
 
+execute: 
+  error: FALSE
+
